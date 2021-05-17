@@ -48,37 +48,54 @@ function matching(){
                     parent.classList.add('disabeld');
                 });
                 if(myParentQuesizLength[0].children[1].children[0].src == myParentQuesizLength[1].children[1].children[0].src){
+                    if(myParentQuesizLength[0].getAttribute('class') != myParentQuesizLength[1].getAttribute('class')){
+                        setTimeout(function(){
+                            myParentQuesizLength[0].classList.add('transform');
+                            myParentQuesizLength[1].classList.add('transform');
+                        },1000)
+                        
+                        setTimeout(function(){
+                            myParentQuesizLength[0].classList.add('match');
+                            myParentQuesizLength[1].classList.add('match');
+                        },1500);
+        
+                        setTimeout(function(){
+                            myParentQuesizLength = [];
+                            currentScore++;
+                            tottalScore = currentScore * 2; 
+                            scoreBoard.textContent = 'Score: ' + tottalScore;
+                            if(currentScore == 8){
+                                clearInterval(countDownVar);
+                                container.insertBefore(celebMessage,container.children[0]);
+                                celebMessage.classList.add('showCelebMessage');
+                                celebMessageP.textContent = `your Score is: ${tottalScore}`;
+                                //Append Paragraph To The CelebMessage
+                                celebMessage.appendChild(celebMessageP);
+                            }
+                        },2000)
+                        
+                        setTimeout(function(){
+                            parentQueiz.forEach(parent =>{
+                                parent.classList.remove('disabeld');
+                            });
+                        },2500);
+                    }else{
+                        setTimeout(function(){
+                            myParentQuesizLength[0].classList.remove('transform');
+                            myParentQuesizLength[1].classList.remove('transform');
+                        },1000);
+        
+                        setTimeout(function(){
+                            myParentQuesizLength = [];
+                        },1500);
+        
+                        setTimeout(function(){
+                            parentQueiz.forEach(parent =>{
+                                parent.classList.remove('disabeld');
+                            });
+                        },2000)
+                    }
                     
-                    setTimeout(function(){
-                        myParentQuesizLength[0].classList.add('transform');
-                        myParentQuesizLength[1].classList.add('transform');
-                    },1000)
-                    
-                    setTimeout(function(){
-                        myParentQuesizLength[0].classList.add('match');
-                        myParentQuesizLength[1].classList.add('match');
-                    },1500);
-    
-                    setTimeout(function(){
-                        myParentQuesizLength = [];
-                        currentScore++;
-                        tottalScore = currentScore * 2; 
-                        scoreBoard.textContent = 'Score: ' + tottalScore;
-                        if(currentScore == 8){
-                            clearInterval(countDownVar);
-                            container.insertBefore(celebMessage,container.children[0]);
-                            celebMessage.classList.add('showCelebMessage');
-                            celebMessageP.textContent = `your Score is: ${tottalScore}`;
-                            //Append Paragraph To The CelebMessage
-                            celebMessage.appendChild(celebMessageP);
-                        }
-                    },2000)
-                    
-                    setTimeout(function(){
-                        parentQueiz.forEach(parent =>{
-                            parent.classList.remove('disabeld');
-                        });
-                    },2500);
                 }else if(myParentQuesizLength[0].children[1].children[0].src != myParentQuesizLength[1].children[1].children[0].src){
                     
                     setTimeout(function(){
