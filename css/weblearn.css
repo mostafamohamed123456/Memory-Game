@@ -5,16 +5,21 @@ body{
     perspective: 3000px;
     font-family:FontAwesome
 }
+.heading{
+    padding: 15px;
+    font-family: 'KoHo',Tahoma, sans-serif;
+    text-decoration: underline;
+}
 /*Start Styling The Setting*/
 .settings{
     display:flex;
     justify-content:center;
     align-items:center;
-    margin: 130px 0 0;
+    margin: 78px 0 0;
 }
 .settings p{
     margin: 0 15px;
-    font-family:'Consolas','Forte', Arial, sans-serif;
+    font-family: 'KoHo',Tahoma, sans-serif;
     font-size:20px;
     font-style:italic;
 }
@@ -23,13 +28,13 @@ body{
     margin-left: 10px;
 }
 .settings .count-down{
-    font-family:'Consolas','Forte', Arial, sans-serif;
+    font-family: 'KoHo',Tahoma, sans-serif;
     font-size:24px;
     font-style:italic;
 }
 .settings #restart{
     padding: 8px;
-    font-family:'Consolas','Forte', Arial, sans-serif;
+    font-family: 'KoHo',Tahoma, sans-serif;
     border:0px;
     font-style:italic;
     border-radius:5px;
@@ -57,7 +62,7 @@ body{
     opacity: 1;
 }
 .celebrate h3{
-    font-family:'Consolas','Forte', Arial, sans-serif;
+    font-family: 'KoHo',Tahoma, sans-serif;
     font-weight:bold;
     font-size:24px;
     font-style:italic;
@@ -67,8 +72,8 @@ body{
 /*Start Styling The Game*/
 #start-game{
     position: absolute;
-    top: 50%;
-    left: 45%;
+    top: 61%;
+    left: 42%;
     z-index: 2;
     background: #111;
     color: #EEE;
@@ -103,8 +108,8 @@ body{
         width: 100%;
     }
     #start-game{
-        left: 28%;
-        top: 54%;
+        left: 33%;
+        top: 62%;
     }
 }
 @media (min-width:800px) And (max-width:900px){
@@ -112,8 +117,13 @@ body{
         width: 100%;
     }
     #start-game{
-        left: 42%;
-        top: 52%;
+        left: 33%;
+        top: 62%;
+    }
+}
+@media (min-width:1500px){
+    #start-game{
+        left: 45%;
     }
 }
 .game-container .overlay{
