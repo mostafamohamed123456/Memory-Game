@@ -14,21 +14,24 @@ body{
 }
 .settings p{
     margin: 0 15px;
-    font-family:'Forte', Arial, sans-serif;
+    font-family:'Consolas','Forte', Arial, sans-serif;
     font-size:20px;
+    font-style:italic;
 }
 .settings .count-down, button{
     margin-right: 10px;
     margin-left: 10px;
 }
 .settings .count-down{
-    font-family:'Forte', Arial, sans-serif;
+    font-family:'Consolas','Forte', Arial, sans-serif;
     font-size:24px;
+    font-style:italic;
 }
 .settings #restart{
     padding: 8px;
-    font-family:'Forte', Arial, sans-serif;
+    font-family:'Consolas','Forte', Arial, sans-serif;
     border:0px;
+    font-style:italic;
     border-radius:5px;
     cursor:pointer;
     background:#086;
@@ -54,9 +57,10 @@ body{
     opacity: 1;
 }
 .celebrate h3{
-    font-family:'Forte', Arial, sans-serif;
+    font-family:'Consolas','Forte', Arial, sans-serif;
     font-weight:bold;
     font-size:24px;
+    font-style:italic;
     text-align:center;
     color:#F00;
 }
@@ -99,8 +103,8 @@ body{
         width: 100%;
     }
     #start-game{
-        left: 36%;
-        top: 52%;
+        left: 28%;
+        top: 54%;
     }
 }
 @media (min-width:800px) And (max-width:900px){
